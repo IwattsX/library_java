@@ -5,7 +5,7 @@ public class Staff extends Person {
         library.members.add(member);        
     }
 
-    void register_book(Library library,Book book){
+    void register_book(Library library, Book book){
         library.books.add(book);
     }
 }

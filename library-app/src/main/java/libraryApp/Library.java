@@ -2,9 +2,9 @@ package libraryApp;
 import java.util.ArrayList;
 
 public class Library {
-    ArrayList<Book> books;
-    ArrayList<Member> members;
-    ArrayList<Staff> staffs;
+    public ArrayList<Book> books = new ArrayList<Book>();
+    public ArrayList<Member> members = new ArrayList<Member>();
+    public ArrayList<Staff> staffs = new ArrayList<Staff>();
 
     void add_book(Book book){
         books.add(book);
@@ -15,15 +15,23 @@ public class Library {
     }
 
     void List_Books(){
-        System.out.println(books);
+        for(int i = 0; i<books.size(); i++){
+            Book book = books.get(i);
+            System.out.println(book.describe());
+        }
     }
 
     void List_member(){
-        System.out.println(members);
+        for(int i = 0; i<members.size(); i++){
+            Member member = members.get(i);
+            System.out.println(member.id + ": " + member.name);
+        }
     }
 
     void List_staff(){
-        System.out.println(staffs);
+        for(int i = 0; i<staffs.size(); i++){
+            Staff staff = staffs.get(i);
+            System.out.println(staff.id + ": " + staff.name);
+        }
     }
-
 }
