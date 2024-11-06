@@ -4,9 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
 
 import org.junit.jupiter.api.Test;
 
@@ -72,7 +69,7 @@ public class AppTest {
             member.name = members[i];
             member.id = String.format("%d", i);
     
-            lib.staffs.add(staff);
+            lib.staff.add(staff);
             lib.register_member(member);
         }
     
